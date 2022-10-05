@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+  }
+  
+  h2 {
+    text-align: left;
+  }
+  
+  .left {
+    display: inline;
+    list-style-type: none;
+    font-size: 20px;
+  }
+  
+  .right {
+    display: inline;
+    list-style-type: none;
+    font-size: 20px;
+    float: right;
+  }
+  
