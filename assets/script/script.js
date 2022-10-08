@@ -20,33 +20,50 @@ function countdown() {
 
   
   
-  let questOne ={
-    title: 'Best Quiz Ever',
-    alternatives: ['alpha', 'bravo', 'charlie', 'delta', 'echo', 'six'],
-    correctAnswer: 1
-  }
+  // let questionOne ={
+  //   title: 'Best Quiz Ever',
+  //   alternatives: ['alpha', 'bravo', 'charlie', 'delta', 'echo', 'six'],
+  // }
   const cont = document.getElementById('test');
 
   const ul = document.createElement('ul');
   ul.setAttribute ('style', 'padding: 0; margin: 0;');
-  ul.setAttribute('id', 'theList');
+  ul.setAttribute('id', 'questOne');
+  
+  var theList = ['Right', 'Wrong', 'Maybe Right', 'Maybe Wrong'];
+  var output = document.getElementById('test');
+  var getButtonList = function(items){
+      var html = '<ul>';
+      for(var item in items){
+          html += '<li><button>' + items[item] + '</button></li>';
+      }
+      html += '</ul>';
+            ul.appendChild(li);		
+      li.addEventListener('click', function() {
+        alert('Button ' + i + ' was clicked!')})
+      cont.appendChild(ul);	
+      return html;
+      	
+  };
+  output.innerHTML = getButtonList( theList );
 
-  for (i = 0; i <= questOne.alternatives.length - 1; i++) {
-      const li = document.createElement('button');
-      li.id = "button" + i;
-      li.innerHTML = questOne.alternatives[i];	                        
-      li.setAttribute ('style', 'display: block;');	
-      ul.appendChild(li);		
+  // for (i = 0; i<= theList.length -1; i++) {
+  //   var x = document.querySelector('questOne');
+  //   x.addEventListener("click", alert('Button ' + i + ' was clicked!'))}
 
+  // for (i = 0; i <= questionOne.alternatives.length - 1; i++) {  
+  //   const li = document.createElement('button');
+  //     li.innerHTML = questionOne.alternatives[i];	                        
+  //     li.setAttribute ('style', 'display: block;');	
+  //     ul.appendChild(li);		
+  //     li.addEventListener('click', function() {
+        // alert('Button ' + i + ' was clicked!')})
+  //     cont.appendChild(ul);		
+  //   }
+
+  // for(var i = 0; i <= questOne.alternatives.length; i++){
+  //   var button = document.getElementById('button' + i);
     
-  }
- 
-  cont.appendChild(ul);		
 
-  for(var i = 0; i <= questOne.alternatives.length; i++){
-    var button = document.getElementById('button' + i);
-    
-  button.addEventListener('click', function() {
-    alert('Button ' + i- + ' was clicked!');
-    });
-    }
+  //   });
+  //   }
