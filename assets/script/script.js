@@ -38,10 +38,6 @@ function countdown() {
           html += '<li><button>' + items[item] + '</button></li>';
       }
       html += '</ul>';
-            ul.appendChild(li);		
-      li.addEventListener('click', function() {
-        alert('Button ' + i + ' was clicked!')})
-      cont.appendChild(ul);	
       return html;
       	
   };
