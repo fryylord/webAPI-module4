@@ -42,7 +42,7 @@ h1{
 }
 .question{
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .answers {
   margin-bottom: 20px;
@@ -85,4 +85,5 @@ button:hover{
   position: relative;
   height: 200px;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
