@@ -1,5 +1,4 @@
 var timerEl = document.getElementById('countdown');
-var mainEl = document.getElementById('main');
 
 var timer =
 function countdown() {
@@ -21,28 +20,33 @@ function countdown() {
 
   
   
-  const arr = ['alpha', 'bravo', 'charlie', 'delta', 'echo'];
+  let questOne ={
+    title: 'Best Quiz Ever',
+    alternatives: ['alpha', 'bravo', 'charlie', 'delta', 'echo', 'six'],
+    correctAnswer: 1
+  }
   const cont = document.getElementById('test');
 
   const ul = document.createElement('ul');
   ul.setAttribute ('style', 'padding: 0; margin: 0;');
   ul.setAttribute('id', 'theList');
 
-  for (i = 0; i <= arr.length - 1; i++) {
-      const li = document.createElement('li');
-      
-      li.innerHTML = arr[i];	                        
+  for (i = 0; i <= questOne.alternatives.length - 1; i++) {
+      const li = document.createElement('button');
+      li.id = "button" + i;
+      li.innerHTML = questOne.alternatives[i];	                        
       li.setAttribute ('style', 'display: block;');	
       ul.appendChild(li);		
+
+    
   }
+ 
   cont.appendChild(ul);		
 
-  function shuffle(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+  for(var i = 0; i <= questOne.alternatives.length; i++){
+    var button = document.getElementById('button' + i);
+    
+  button.addEventListener('click', function() {
+    alert('Button ' + i- + ' was clicked!');
+    });
     }
-    return array;
-  }
