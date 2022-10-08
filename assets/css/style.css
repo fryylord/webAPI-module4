@@ -6,21 +6,25 @@ h2 {
   text-align: left;
 }
 
+body{
+  background-color: #f8f6f0;
+}
+
 .highScores {
   display: inline;
   list-style-type: none;
   font-size: 20px;
-  float:inline-start;
+  text-align: left;
 }
 
 .timer {
   display: inline;
   list-style-type: none;
   font-size: 20px;
-  float:inline-end;
+  float:right;
 }
 
-body{
+.quiz{
 	font-size: 20px;
 	font-family: 'Work Sans', sans-serif;
 	color: #333;

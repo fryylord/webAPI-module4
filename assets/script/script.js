@@ -1,28 +1,22 @@
-// let startButton = document.createElement("button");
-// startButton.innerHTML = "Take Test";
-// startButton.onclick = function () {
-//  generateQuiz; countdown;
-// };
-// document.body.appendChild(startButton);
-// startButton.addEventListener("click", generateQuiz)
-// startButton.addEventListener("click", countdown)
+var timerEl = document.getElementById('countdown');
 
-// function countdown() {
-//   var timeLeft = 99;
-//   var timeInterval = setInterval(function () {
-//     if (timeLeft > 1) {
-//       timerEl.textContent = timeLeft + ' seconds remaining';
-//       timeLeft--;
-//     } else if (timeLeft === 1) {
-//       timerEl.textContent = timeLeft + ' second remaining';
-//       timeLeft--;
-//     } else {
-//       timerEl.textContent = '';
-//       clearInterval(timeInterval);
-//       displayMessage();
-//     }
-//   }, 1000);
-// }
+function countdown() {
+  var timeLeft = 99;
+  var timeInterval = setInterval(function () {
+    if (timeLeft > 1) {
+      timerEl.textContent = timeLeft + ' seconds remaining';
+      timeLeft--;
+    } else if (timeLeft === 1) {
+      timerEl.textContent = timeLeft + ' second remaining';
+      timeLeft--;
+    } else {
+      timerEl.textContent = '';
+      clearInterval(timeInterval);
+      displayMessage();
+    }
+  }, 1000);
+}
+countdown();
 
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
