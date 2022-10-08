@@ -1,25 +1,26 @@
-<html lang="en-US">
-
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>HTML Display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Click Counter</title>
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
 
-  <body>
-    <header>
-      <nav class="highScores">
-        <a href="https://www.google.com">View High Scores</a>
-      </nav>
-      <nav class="timer" id="countdown">
-        Timer
-      </nav>
-    </header>
-    
-    <section id="test"></section>
-    
-    <script src="./assets/script/script.js"></script> 
+  <header>
+    <nav class="highScores">
+      <a href="https://www.google.com">View High Scores</a>
+    </nav>
+    <nav class="timer" id="countdown">
+      Timer
+    </nav>
+  </header>
 
-</body>
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
 
-</html>
+<script src="./assets/script/script.js"></script>
