@@ -1,6 +1,7 @@
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
 
+var timer =
 function countdown() {
     var timeLeft = 99;
     var timeInterval = setInterval(function () {
@@ -17,5 +18,3 @@ function countdown() {
       }
     }, 1000);
   }
-
-  countdown();
