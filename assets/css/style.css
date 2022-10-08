@@ -2,123 +2,43 @@ header {
     width: 100%;
   }
   
-  h2 {
+h2 {
     text-align: left;
   }
   
-  .highScores {
+.highScores {
     display: inline;
     list-style-type: none;
     font-size: 20px;
   }
   
-  .timer {
+.timer {
     display: inline;
     list-style-type: none;
     font-size: 20px;
     float: right;
   }
   
-  #test {
+#test {
     display: flex;
     margin: auto;
+    align-items: center;
     justify-content: center;
-    width: 50%;
-    padding: 10px;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    background-color: white;
+    width: 100px;
+    padding-top: 100px;
+    flex-flow: column;
   }
   
-  li {
-    height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 5px;
-    background-color:  #001b44;
-    color: white;
-    font-size: 1.5em;
-    line-height: 1.5;
-  }
-  
-  li:before {
-    content: "\200B";
-    position: absolute;
-  }
-  
-  li::after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-  
-  li button {
-    float: right;
-    border: none;
+.questions {
     height: 40px;
     cursor: pointer;
     background-color: #ff7034;
-    color: white;
+    color: #000000;
     font-size: 1em;
-  }
-  
-  .card {
-    display: block;
-    background-color:	#FFFFE0;
     border: 1px solid #eceff1;
     border-radius: 8px;
     box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
       rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-    margin: 60px auto;
-    padding: 20px;
     width: 80vw;
+    margin-top: 20px
   }
-  
-button {
-  background-image: linear-gradient(#42A1EC, #0070C9);
-  border: 1px solid #0077CC;
-  border-radius: 4px;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  direction: ltr;
-  display: block;
-  font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  letter-spacing: -.022em;
-  line-height: 1.47059;
-  min-width: 30px;
-  overflow: visible;
-  padding: 4px 15px;
-  text-align: center;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-}
-
-button {
-  cursor: default;
-  opacity: 1;
-}
-
-button:hover {
-  background-image: linear-gradient(#51A9EE, #147BCD);
-  border-color: #1482D0;
-  text-decoration: none;
-}
-
-button:active {
-  background-image: linear-gradient(#3D94D9, #0067B9);
-  border-color: #006DBC;
-  outline: none;
-}
-
-button:focus {
-  box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
-  outline: none;
-}
