@@ -1,5 +1,6 @@
 var timerEl = document.getElementById('countdown');
 
+const runQuiz = function() {
 function countdown() {
   var timeLeft = 99;
   var timeInterval = setInterval(function () {
@@ -158,4 +159,6 @@ const myQuestions = [
     submitButton.addEventListener('click', showResults);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
-  })();
+  })();}
+  const startButton = document.getElementById("startQuiz");
+  startButton.addEventListener("click",runQuiz)
