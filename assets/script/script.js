@@ -13,7 +13,6 @@ function countdown() {
     } else {
       timerEl.textContent = '';
       clearInterval(timeInterval);
-      displayMessage();
     }
   }, 1000);
 }
@@ -62,6 +61,16 @@ const myQuestions = [
       d: "constant"
     },
     correctAnswer: "a"
+  },
+  {
+    question: "When an operator's value is NULL, the typeof returned by the unary operator is:",
+    answers: {
+      a: "boolean",
+      b: "undefined",
+      c: "object",
+      d: "integer"
+    },
+    correctAnswer: "c"
   },
 ];
 
