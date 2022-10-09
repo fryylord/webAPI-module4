@@ -13,6 +13,7 @@ function countdown() {
     } else {
       timerEl.textContent = '';
       clearInterval(timeInterval);
+      console.log(timerEl.textContent)
     }
   }, 1000);
 }
@@ -127,6 +128,7 @@ const myQuestions = [
       });
   
       resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+      return numCorrect
     }
   
     function showSlide(n) {
@@ -164,8 +166,23 @@ const myQuestions = [
     let currentSlide = 0;
   
     showSlide(currentSlide);
-  
+
+    const scoreContainer = document.getElementById('score')
+    function generateScore() {
+      const str = timerEl.textContent;
+      const replaced = str.replace(/\D/g, ''); 
+      
+      let num;
+      if (replaced !== '') {
+        num = Number(replaced);
+      }
+      console.log(num);
+      scoreContainer.innerHTML = `Your score is ${num}!`
+      return num      
+    }
+    
     submitButton.addEventListener('click', showResults);
+    submitButton.addEventListener('click', generateScore);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })();}
