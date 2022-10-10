@@ -128,7 +128,7 @@ const myQuestions = [
       });
   
       resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-      return numCorrect
+      return myQuestions.length - numCorrect
     }
   
     function showSlide(n) {
@@ -158,27 +158,33 @@ const myQuestions = [
     function showPreviousSlide() {
       showSlide(currentSlide - 1);
     }
-  generateQuiz()
+    generateQuiz()
   
     const previousButton = document.getElementById("previous");
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
+    const scoreContainer = document.getElementById('score')
+    
     let currentSlide = 0;
-  
     showSlide(currentSlide);
 
-    const scoreContainer = document.getElementById('score')
     function generateScore() {
       const str = timerEl.textContent;
       const replaced = str.replace(/\D/g, ''); 
-      
+
       let num;
       if (replaced !== '') {
         num = Number(replaced);
       }
       console.log(num);
-      scoreContainer.innerHTML = `Your score is ${num}!`
-      return num      
+      
+      if (num - (showResults() * 20) > 0) {
+        scoreContainer.innerHTML = `You score is ${num - (showResults() * 20)}!`
+      }
+      else{
+        scoreContainer.innerHTML = `Your score is 0!`
+      }
+
     }
     
     submitButton.addEventListener('click', showResults);
