@@ -179,16 +179,40 @@ const myQuestions = [
       console.log(num);
       
       if (num - (showResults() * 20) > 0) {
-        scoreContainer.innerHTML = `You score is ${num - (showResults() * 20)}!`
+        scoreContainer.innerHTML = `You score is ${num - (showResults() * 20)}!`;
+        return num - (showResults()*20)
       }
       else{
-        scoreContainer.innerHTML = `Your score is 0!`
+        scoreContainer.innerHTML = `Your score is 0!`;
+        return 0
       }
 
     }
+    var scoreEl = document.getElementById('score');
     
+    function getScore() {     
+      const strTwo = scoreEl.textContent;
+      const replacedTwo = strTwo.replace(/\D/g, ''); 
+
+      let numTwo;
+      if (replacedTwo !== '') {
+        numTwo = Number(replacedTwo);
+      }
+      console.log(numTwo);
+      return numTwo
+    }
+
+    // var initialsEl = document.getElementById('initials');
+    // function initialsBox() {
+    //   const initialsEl = document.createElement(input);
+    //   input.setAttribute("type", "text");
+    //   document.body.appendChild(input);
+    // }
+
     submitButton.addEventListener('click', showResults);
     submitButton.addEventListener('click', generateScore);
+    submitButton.addEventListener('click', getScore);
+    // submitButton.addEventListener('click', initialsBox);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })();}
