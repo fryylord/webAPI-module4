@@ -118,3 +118,15 @@ a:hover {
 a:active { 
   text-decoration: none; 
 }
+
+#buttIni {
+  font-family: 'Work Sans', sans-serif;
+	font-size: 11px;
+	background-color: #000000;
+	color: #ffffff;
+	border: 0px;
+	border-radius: 5px;
+	padding: 4px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}

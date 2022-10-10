@@ -202,19 +202,24 @@ const myQuestions = [
       return numTwo
     }
 
-    // var initialsEl = document.getElementById('initials');
-    // function initialsBox() {
-    //   const initialsEl = document.createElement(input);
-    //   input.setAttribute("type", "text");
-    //   document.body.appendChild(input);
-    // }
+    const initialsEl = document.getElementById('initials')
+    function initialsBox() {
+      var getInitials = document.createElement('input');
+      getInitials.setAttribute("type","text");
+      var buttInitials = document.createElement('button');
+      buttInitials.setAttribute("id", "buttIni");
+      buttInitials.textContent = 'Enter Initials to Save High Score'
+      initialsEl.append(getInitials);
+      initialsEl.append(buttInitials);
+    }
 
     submitButton.addEventListener('click', showResults);
     submitButton.addEventListener('click', generateScore);
     submitButton.addEventListener('click', getScore);
-    // submitButton.addEventListener('click', initialsBox);
+    submitButton.addEventListener('click', initialsBox);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
+    buttInitials.addEventListener("click", saveInitialsScore);
   })();}
   const startButton = document.getElementById("startQuiz");
   startButton.addEventListener("click",runQuiz)
