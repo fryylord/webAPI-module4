@@ -22,7 +22,7 @@ countdown();
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
-const myQuestions = [
+const questions = [
   {
     question: "Javascript is an _______ language?",
     answers: {
@@ -79,7 +79,7 @@ const myQuestions = [
     function generateQuiz(){
       const output = [];
   
-      myQuestions.forEach(
+      questions.forEach(
         (currentQuestion, questionNumber) => {
   
           const answers = [];
@@ -112,7 +112,7 @@ const myQuestions = [
   
       let numCorrect = 0;
   
-      myQuestions.forEach( (currentQuestion, questionNumber) => {
+      questions.forEach( (currentQuestion, questionNumber) => {
   
         const answerContainer = answerContainers[questionNumber];
         const selector = `input[name=question${questionNumber}]:checked`;
@@ -127,8 +127,8 @@ const myQuestions = [
         }
       });
   
-      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-      return myQuestions.length - numCorrect
+      resultsContainer.innerHTML = `${numCorrect} out of ${questions.length}`;
+      return questions.length - numCorrect
     }
   
     function showSlide(n) {
