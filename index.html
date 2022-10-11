@@ -7,9 +7,7 @@
   </head>
 
   <header>
-    <nav class="highScores">
-      <a href="https://www.google.com">View High Scores</a>
-    </nav>
+    <button id="highScores">View High Scores</button>
     <nav class="timer" id="countdown">
       Timer
     </nav>
@@ -24,6 +22,16 @@
 <div id="results"></div> 
 <div id="score"></div>
 <div id="initials"></div>
+<div id="card">
+  <h1>High Scores List</h1>
+  <form id="todo-form" method="POST">
+    <label for="todo-text">Enter Initials </label>
+    <input type="text" placeholder="Enter Initials for High Score!" name="todo-text" id="todo-text" />
+  </form>
+  <p>High Scores: <span id="todo-count">0</span></p>
+  <ul id="todo-list"></ul>
+
+</div>
 </section>
 
 <script src="./assets/script/script.js"></script>
