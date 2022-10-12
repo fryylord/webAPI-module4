@@ -305,3 +305,10 @@ function showHighScores() {
   })();}
   const startButton = document.getElementById("startQuiz");
   startButton.addEventListener("click",runQuiz)
+
+  function showHighScores() {
+    let card = document.getElementById("card");
+    card.style.setProperty("visibility", "visible");
+  }
+
+  highScores.addEventListener('click', showHighScores)
