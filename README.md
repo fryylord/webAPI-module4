@@ -2,7 +2,7 @@
 
 ## Solution for Module 4 Challenge
 
-This site has been created as an interactive quiz to test the knowledge of the participant and give a score based on the performance.  A penalty is assesed for incorrect answers, subtracting from the time based score.  After completion, the participant can enter their initials to log their score, as well as view previous scores and their rankings.  
+This site has been created as an interactive quiz to test the knowledge of the participant and give a score based on the performance.  A penalty is assesed for incorrect answers, subtracting from the time based score.  After completion, the participant can enter their initials to log their score, as well as view previous scores.  
 
 ![](./assets/images/Screenshot.jpg)
 [Link to Page](https://fryylord.github.io/webAPI-module4/)
@@ -22,7 +22,9 @@ To test the users knowledge in javascript, record and retrieve scores based on p
 
 ## Credits
 
-While much of this was assembled on my own, various pieces of source code from https://ku.bootcampcontent.com/ku-coding-boot-camp/KU-VIRT-FSF-PT-09-2022-U-LOLC/ have been used.  
+https://ku.bootcampcontent.com/ku-coding-boot-camp/KU-VIRT-FSF-PT-09-2022-U-LOLC/
+https://www.sitepoint.com/simple-javascript-quiz/
+
 
 ## License
  
